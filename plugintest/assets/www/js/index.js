@@ -40,7 +40,7 @@ var app = {
         var pushNotification = window.pushNotification;
 
         var client = new Apigee.Client({
-            orgName:"charles7793",
+            orgName:"charles77",
             appName:"sandbox"
         });
 
@@ -50,7 +50,7 @@ var app = {
 
         pushNotification.registerDevice(gcmOptions, function(device){
             var options = {
-                notifier:"android notification",
+                notifier:"android_push",
                 deviceToken:device.deviceId
             };
             
@@ -66,7 +66,7 @@ var app = {
             //push here
             var devicePath = "devices/"+client.getDeviceUUID()+"/notifications";
             var options = {
-                notifier:"android notification",
+                notifier:"android_push",
                 path:devicePath,
                 message:"hello world from JS"
             };
